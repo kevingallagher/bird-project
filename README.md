@@ -1,1 +1,1 @@
-# bird-project
+# Bird Project

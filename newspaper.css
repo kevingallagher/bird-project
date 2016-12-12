@@ -1,0 +1,348 @@
+body {
+    font-family: 'Droid Serif', serif;
+    overflow-x: hidden;
+}
+
+.bird{z-index:-4;
+    position: fixed;
+    min-width: 300px;
+    max-width:500px;
+    width: 30%;
+   
+}
+
+.hedge{position: fixed;
+z-index: -2;
+min-width: 300px;
+    width: 100%;
+    max-width: 1270px;
+    bottom:1;
+transition: 0.6s;}
+
+
+.nav{ position: fixed; text-align: center;
+    left: 0;
+    border-top:solid rgba(132,176,55,1);
+    border-bottom:solid rgba(132,176,55,1);
+    height: 40px;
+    right: 0;
+    top: 0;
+    margin: auto;
+    z-index: 4; background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;}
+
+li {margin-top:6;
+list-style: none;
+    font-size: 1.5em;
+    text-decoration: none;
+    list-style: none;
+}
+    
+a{text-decoration: none;
+color: black;
+}
+a:hover{color:rgba(221,72,48,0.7);
+transition: color 0.3s;}
+
+.header{width: 70%;
+    margin: auto;
+    padding:0em 0 0em 0;
+    margin-top: 5em
+}
+
+h1{
+    font-family: didot;
+    font-weight: 900;
+    font-size: 5em;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 72px;
+    line-height: 1.5em;
+    background-color: rgba(255,255,255,0.2);
+        margin-top:20.5%;
+    text-align: center;
+
+}
+
+.dash{ z-index: -7;
+top:1em;
+position: absolute;
+right: 0;
+    left: 0;margin: auto;
+    width: 75%;
+    
+    
+}
+
+.one{color: rgba(132,176,55,1)}
+.two{color: rgba(69,114,209,1)}
+.three{color: rgba(221,72,48,1)}
+
+p{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.5em
+}
+
+
+
+
+.subheader{position: absolute;
+    margin: auto;
+    left: 0;right: 0;
+    bottom: 60%;
+    text-transform: uppercase;
+    padding:1em;
+    margin-bottom: 17em;
+    margin: auto;
+    text-align: center;
+}
+
+.green-dash{color: rgba(132,176,55,1) }
+
+.content{background-image: url(../bird-project/img/background/Bitmap%20Copy.png);
+    margin-top:30%;
+    font-size: 0;
+    line-height: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+
+.collumn{background-color: rgba(255,255,255,0.5);
+    margin: 1.5em;
+    padding:1em;
+    font-size: 14px;
+    line-height: 20px;
+    width: 400px;
+    padding:2%;
+    vertical-align: top;
+    transition:.1s;
+    flex-grow: 1;
+}
+
+.collumn .headline{
+    text-align: center;
+    line-height: normal;
+    font-family: 'Playfair Display', serif;
+    display: block;
+    margin: 0 auto;
+
+
+}
+.collumn .headline.hl1{
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 10px 0 10px 0;
+
+}
+.first{width: 300px;
+transition: 0s ease-in;}
+
+.first:hover {border: 4px;
+border-style: solid;
+    border-color:rgba(132,176,55,1);}
+.first:active {width: 50%;
+border: 4px;
+border-style: solid;
+    border-color: rgba(221,72,48,1);
+transition: 0.2s ease-in-out}
+    .perm {
+   transition: width 0s 9999999s;
+}
+
+
+
+.second:hover {border: 4px;
+border-style: solid;
+    border-color:rgba(221,72,48,1) }
+.second:active {width: 50%;
+border: 4px;
+border-style: solid;
+    border-color:rgba(132,176,55,1)}
+.third:hover {border: 4px;
+border-style: solid;
+    border-color:rgba(69,114,209,1) }
+.third:active {width: 50%;
+border: 4px;
+border-style: solid;
+    border-color:rgba(221,72,48,1)}
+
+.collumn .headline.hl1{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 36px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.collumn .headline.hl2{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.collumn .headline.hl2:before{
+    border-top: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
+.collumn .headline.hl2:after{
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 10px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.collumn .headline.hl3{
+    font-weight: 400;
+    font-size: 42px;
+    text-transform: uppercase;
+    font-style: italic;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+
+.collumn .blockquote{
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    line-height: 44px;
+    font-style: italic;
+    text-align: center;
+    font-weight: 400;
+    display: block;
+    margin: 40px 0 40px 0;
+    font-feature-settings: "liga", "dlig";
+
+}
+.collumn .blockquote:before{
+    border-top: 4px solid #2f2f2f;
+    border-top-color: rgba(132,176,55,1);
+    content: '';
+    width: 80%;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+}
+.collumn .blockquote:after{
+    border-bottom: 4px solid #2f2f2f;
+    border-bottom-color: rgba(132,176,55,1);
+    content: '';
+    width: 40%;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+}
+.collumn .figure {
+	  margin: 0 0 20px;
+}
+.collumn .figcaption{
+	font-style: italic;
+	font-size: 12px;
+}
+footer{
+position: absolute;width: 100%;
+overflow-x: hidden;
+background-color: darkgray;
+    opacity: 0.7
+}
+footer p{ font-size: .8em;
+padding: 1.5em;
+color: white
+    ;
+
+margin-top:1em;
+    width: 80%;
+    margin: auto;
+    position: relative;
+bottom:0;}
+.collumn .map{width: 100%;}
+
+.media {
+    -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
+    filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
+    mix-blend-mode: multiply;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: rgba(255,255,255,.5)}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+/*________________________________________________________________________________________________________________________________*/
+/*MEDIAQUERIES*/
+
+
+}
+@media only all and (max-width: 1200px) {
+    .collumn{
+        width: 31%;
+    }
+
+}
+    @media only all and (max-width: 900px) {
+    .collumn{
+        width: 47%;
+    }
+
+}
+@media only all and (max-width: 600px) {
+    .collumn{
+        width: 100%;
+    }
+	.collumn + .collumn {
+				border-left: none;
+      	border-bottom: 1px solid #2f2f2f;
+	}
+    h1{margin: auto;
+        margin-left:-30px;
+        line-height: 1em;
+        max-width: 350px;
+        font-size: 3em;
+        overflow: hidden;
+    }
+    .header{width: 60%;
+    margin: auto;
+    margin-top: -1em;
+    height: 60vh;
+    padding:6em 0 6em 0; 
+}
+    .bird{z-index:-4;position: fixed;
+    right: -.1em;
+    min-width:  300px;
+    max-width:580px;
+    width: 50%;
+    margin-top: 5em
+}
+    .hedge{position: fixed;
+z-index: ;
+min-width: 300px;
+    width: 100%;
+    max-width: 1270px;
+    bottom: 0;}
+    .content{margin-top:60;}
+
+}

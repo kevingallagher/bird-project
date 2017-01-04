@@ -334,12 +334,13 @@ th {
 				border-left: none;
       	border-bottom: 1px solid #2f2f2f;
 	}
-    h1{margin: auto;
-        margin-left:-30px;
-        line-height: 1em;
-        max-width: 350px;
+
+    h1{
+        margin: auto;
+        line-height: 1.2em;
         font-size: 3em;
-        overflow: hidden;
+        width: auto;
+        text-align: center;
     }
     .header{width: 60%;
     margin: auto;

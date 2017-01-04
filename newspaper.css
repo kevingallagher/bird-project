@@ -13,6 +13,8 @@ body {
     width: 100%;
     background-image: url(../bird-project/img/Untitled-6.png);
     background-attachment: fixed;
+      background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .bird{z-index:-4;

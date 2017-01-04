@@ -12,6 +12,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     background-image: url(../bird-project/img/Untitled-6.png);
+    background-attachment: fixed;
 }
 
 .bird{z-index:-4;

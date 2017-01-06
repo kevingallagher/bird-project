@@ -11,28 +11,47 @@ body {
     font-family: 'Droid Serif', serif;
     overflow-x: hidden;
     width: 100%;
-    background-image: url(../bird-project/img/Untitled-6.png);
+   
     background-attachment: fixed;
       background-size: 100%;
     background-repeat: no-repeat;
 }
 
-.bird{z-index:-4;
-    position: fixed;
-    min-width: 300px;
-    max-width:500px;
-    width: 30%;
-    
-   
+.bird{position: absolute;
+    right: 0;z-index: -2;
+    top:55em;
+    height: 100vh;
+
 }
-.hedge{width: 100%;
-    max-width: 1500px;
+.boa{position: absolute;
+    left: -300;
+    top:3525; 
+    z-index: 0
+
+ 
+}
+.z{position: relative;
+z-index: 1;
+    background-color: rgba(255,255,255,0);}
+
+.hedge{
     position: fixed;
+    opacity: 0.7;
+ width: 100%;
 bottom: 0;
-z-index: -8;}
+    left: 0;
+    z-index: -1;
+}
 
 .national{
 margin-top:2em}
+.finding{margin-top:5em
+;
+}
+.underline{text-decoration: underline; color:rgba(132,176,55,1)}
+.underline{color:rgba(132,176,55,1)}
+.underline{color:rgba(132,176,55,1)}
+
 
 
 
@@ -63,7 +82,8 @@ color: black;
 a:hover{color:rgba(221,72,48,0.7);
 transition: color 0.3s;}
 
-.header{width: 70%;
+.header{width: 100%;
+    background-image: url(../bird-project/img/Untitled-6.png);
     margin: auto;
     padding:0em 0 0em 0;
     margin-top: 5em
@@ -71,14 +91,14 @@ transition: color 0.3s;}
 
 h1{
     font-family: didot;
-    font-size: 6em;
+    font-size: 5.5em;
     text-transform: uppercase;
     line-height: 1.5em;
     display:block;
     margin: auto;
     text-align: center;
     color: black;
-    width: 75%;
+    width: 50%;
     
 
 }
@@ -101,7 +121,13 @@ p{
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 1.2em;
-    line-height: 1.75em
+    line-height: 1.75em;
+        text-align:justify;
+    width: auto;
+    margin: auto;
+    padding-top:0.5em ;
+        padding-bottom:0.5em;
+    
 }
 
 
@@ -110,34 +136,41 @@ p{
 .subheader{position: absolute;
     margin: auto;
     left: 0;right: 0;
-    
+
     text-transform: uppercase;
     padding:1em;
-    margin-bottom: 17em;
     margin: auto;
     text-align: center;
 }
 
 .green-dash{color: rgba(132,176,55,1) }
 
-.content{width: 90%;
+.content{width: 100%;
+    background-image: url(img/background/content.png);
+    background-size:cover;
     font-size: 0;
     line-height: 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    margin: auto
+    justify-content: space-around
+;
+    margin: auto;
+    margin-top:-40px;
+    border-top: 10px;
+    border-style:solid;
+    z-index: 1;
 }
 
 
-.collumn{background-color: rgba(255,255,255,0.5);   
+.collumn{background-color: rgba(255,255,255,0.1);   
     padding:1em;
     font-size: 14px;
     line-height: 20px;
- min-width: 300px;
-  max-width: 45%;
+
+    max-width: 500px;
+
     padding:2%;
-    vertical-align: top;
+    
     transition:.1s;
 }
 
@@ -231,18 +264,18 @@ border-style: solid;
 
 .collumn .blockquote{
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    line-height: 44px;
-    font-style: italic;
+    font-size: 50px;
+
     text-align: center;
-    font-weight: 400;
+    font-weight: 700;
     display: block;
     margin: 40px 0 40px 0;
     font-feature-settings: "liga", "dlig";
+    text-align: justify;
 
 }
 .collumn .blockquote:before{
-    border-top: 4px solid #2f2f2f;
+    border-top: 10px solid #2f2f2f;
     border-top-color: rgba(132,176,55,1);
     content: '';
     width: 80%;
@@ -251,7 +284,7 @@ border-style: solid;
     margin: 0 auto;
 }
 .collumn .blockquote:after{
-    border-bottom: 4px solid #2f2f2f;
+    border-bottom: 10px solid #2f2f2f;
     border-bottom-color: rgba(132,176,55,1);
     content: '';
     width: 40%;
@@ -282,8 +315,25 @@ margin-top:1em;
     margin: auto;
     position: relative;
 bottom:0;}
-.map{width: 100%;
-margin: 50% 0;}
+
+
+ #map {
+                width: 1300px;
+                height: 300px;}
+            }
+.map-container {
+	width: 100%;
+	margin: 50px 0 3000px;
+}
+.map-container iframe{
+	width: 100%;
+	display: block;
+	pointer-events: none;
+	position: relative; /* IE needs a position other than static */
+}
+.map-container iframe.clicked{
+	pointer-events: auto;
+}
 
 .media {
     -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
@@ -312,18 +362,6 @@ th {
 /*________________________________________________________________________________________________________________________________*/
 /*MEDIAQUERIES*/
 
-
-}
-@media only all and (max-width: 1200px) {
-    .collumn{
-        width: 31%;
-    }
-
-}
-    @media only all and (max-width: 900px) {
-    .collumn{
-        width: 47%;
-    }
 
 }
 @media only all and (max-width: 600px) {
@@ -361,6 +399,10 @@ min-width: 300px;
     width: 100%;
     max-width: 1270px;
     bottom: 0;}
-    .content{margin-top:60;}
+    .content{margin-top:400;}
+    p{width: 90%;
+    font-size: 1.6em}
+    .blockquote{width: 70%;
+   display: block;margin: auto 0;}
 
 }

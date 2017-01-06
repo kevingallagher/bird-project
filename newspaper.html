@@ -4,24 +4,64 @@
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="newspaper.css">
     <link rel="" href="smoothscroll.js">
-    <title>Newspaper Style Design Experiment</title>
+    <title>Colourful Takahe</title>
     <meta name="viewport" content="width=device-width">
     <script type="text/javascript">
 
 
 </script>
+     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+        
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"elementType":"labels","stylers":[{"visibility":"off"}]},{"elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(40.6700, -73.9400),
+                    map: map,
+                    title: 'Snazzy!'
+                });
+            }
+        </script>
 
 </head>
 <body>
 <div class="head">
     <div class="header">
-         <h1 class="national"><span class="one">The</span> <span class="two">National</span> <span class="three">Geographic</span> </h1>
-       <h1 class="finding">Finding an <div class="underline">'Extinct'</div> New Zealand Bird</h1>
-       
+         <h1 class="national"><span class="one">The </span><br/><span class="two">National </span><br/> <span class="three">Geographic</span> </h1>
+        <img class="hedge" src="img/hedge.png">
+        <img class="bird" src="img/bird.png">
+         <div class="subheader">March, 1952 <span class="green-dash">/</span> Volume CI <span class="green-dash">/</span> Number Three</div>
+        <img src="img/arrow.svg">
+       <h1 class="finding">Finding an <span class="three">'<span class="undeline">Extinct</span>'</span> New Zealand Bird</h1>
+        <img src="img/arrow.svg">
     </div>
    
 
-    <div class="subheader">March, 1952 <span class="green-dash">/</span> Volume CI <span class="green-dash">/</span> Number Three</div>
+   
 </div>
 
      <ul  class="nav" id="top">
@@ -32,7 +72,6 @@
   </ul>
 
     
-s
 <div class="content">
     
         <div  class="collumn first">
@@ -117,8 +156,8 @@ In New Zealand's ornithological history, extinction, or near extinction, has bee
     
     
     <div class="collumn"><span class="blockquote">"It originally occurred throughout forest and grass ecosystems. Today it is restricted to alpine tussock grasslands on the mainland and feeds primarily on juices from the bases of snow tussock and a species of fern rhizome. It eats introduced grasses on the islands. It usually lays two eggs and chicks can begin breeding at the end of their first year, but usually start in their second. It is long-lived, probably 14-20 years."</span> </div>
-        
-        <div class="collumn third"><div class="head"><span class="headline hl3">Vanished Birds Include 12-Foot Moa</span></div>
+         <img class="boa" src="img/boa.png"/>
+        <div class="collumn third z"><div class="head"><span class="headline hl3">Vanished Birds Include 12-Foot Moa</span></div>
            <p>Before the arrival of Capt. James Cook in 1769, birds were the dominant land vertebrates. The only land mammals were the dog, a Polynesian rat, and two species of bats. The dog and rat had been introduced by the Maoris on their second migration, about A. D. 1150.</p>
 	
              
@@ -136,8 +175,14 @@ The fourth specimen was caught by a dog on the shore of Middle Fiord of Lake Te 
 <br/>
 Notornis Valley, in South Island's Murchison Mountains, lies only six miles from a main road; yet it hid the takahe from human sight for decades. From boyhood Dr. G. B. Orbell, an Invercargill physician, reiused to believe the creature lost. After thirty years his quest succeeded; Dr. Orbell tracked the takahe to the scene of its last stand in one of the wildest parts of the Dominion.</p>
 </div>
-    <div class="collumn map first">
- <iframe src="http://mapbuildr.com/frame/7mm2vo" frameborder="0" height="600" width="100%"></iframe>
+   
+    <div class="map map-container">
+   <div class="overlay" onClick="style.pointerEvents='none'"></div>
+        
+  <h2><a href="https://snazzymaps.com/style/95/roadie" target="_blank"></a></h2>
+
+        <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+        <div id="map"></div>
     </div>
         <div class="collumn second"><div class="head"><span class="headline hl3">Severe Winters Limit Food </span></div>
 		<p>From observations over three nesting seasons, it seems that most, if not ail, of the birds in the main Notornis Valley breed yearly, but very few chicks are hatched and raised. In the 1949-50 season, 40 percent of the observed eggs were totally infertile, only three chicks were hatched, and by February, 1950, only one remained alive. It is now known, however, that several birds besides those under observation were nesting.
@@ -197,6 +242,13 @@ New Zealand Facts: Copyright, 1995-2015, by National Geographic Society, Washing
 });  
                 
         </script>
+<script>
+$('.map-container')
+	.click(function(){
+			$(this).find('iframe').addClass('clicked')})
+	.mouseleave(function(){
+			$(this).find('iframe').removeClass('clicked')});
+</script>
 
 </body>
 
